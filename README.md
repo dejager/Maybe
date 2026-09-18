@@ -17,24 +17,13 @@ if message feels "urgent" with confidence 80% {
 }
 ```
 
-For seventy years, we have asked computers to pick `true` or `false`.
-Then we connected them to language models, which are considerably more like people
-who skimmed the document on the way to the meeting.
+For seventy years, we have asked computers to pick `true` or `false`. Then we connected them to language models, which are considerably more like people with commitment issues.
 
-**Maybe gives uncertainty a place in the program.**
+**Maybe gives uncertainty a place in your app.**
 
-Write a small workflow. Let a model judge a piece of text, pick a route, or rewrite a
-draft. Set a confidence threshold. Give the uncertain case its own branch. Save the
-whole run and replay it without asking the model again.
+Write a small workflow. Let a model judge a piece of text, pick a route, or rewrite a draft. Set a confidence threshold. Give the uncertain case its own branch. Save the whole run and replay it without asking the model again.
 
-It is a native Swift implementation of the [Probably 0.1 language](https://probably-lang.southpolesteve.workers.dev/).
-The `.prob` syntax is the original idea. The Swift framework, iPhone playground,
-and developer experience here are called **Maybe**.
-
-> **Proof of concept, with receipts.** The interpreter is real. The default demo
-> model is deliberately fake: deterministic rules, no keys, no network, no bill.
-> Direct JEV decisions and custom Swift writers are supported. A reported 90% is a model estimate,
-> not a warranty from the universe.
+It is a native Swift implementation of the [Probably 0.1 language](https://probably-lang.southpolesteve.workers.dev/) using the `.prob` syntax as inspiration. 
 
 ## Try the part that says “maybe”
 
@@ -44,8 +33,7 @@ From this checkout, with a Swift 6 toolchain:
 swift run maybe demo
 ```
 
-The demo reads “We might need this soon.” Its simulated judgment is 52/48.
-Your 80% threshold sends it here:
+The demo reads “We might need this soon.” Its simulated judgment is 52/48. Your 80% threshold sends it here:
 
 ```text
 The model is squinting. Ask one more question.
@@ -64,39 +52,29 @@ swift run maybe demo --save run.json
 swift run maybe replay run.json --trace
 ```
 
-Replay uses the original source, input, model responses, and random draws. It makes
-**zero model calls**. You can debug yesterday's questionable decision without
-paying for today's slightly different questionable decision.
+Replay uses the original source, input, model responses, and random draws. It makes **zero model calls**. You can debug yesterday's questionable decisions without paying for today's slightly different questionable decisions.
 
-## Put it in an iPhone
+## Put it on an iPhone
 
-Open [`Examples/MaybePlayground/MaybePlayground.xcodeproj`](Examples/MaybePlayground/MaybePlayground.xcodeproj),
-choose the **MaybePlayground** scheme and an iPhone simulator, then run.
-No signing account is needed for the simulator. The project already references this
-local package; XcodeGen is only needed if you edit the project specification.
+Open [`Examples/MaybePlayground/MaybePlayground.xcodeproj`](Examples/MaybePlayground/MaybePlayground.xcodeproj), choose the **MaybePlayground** scheme and an iPhone simulator, then run. No signing account is needed for the simulator. The project already references this local package; XcodeGen is only needed if you edit the project specification.
 
-The native playground follows the system appearance, with grouped sections, a source editor,
-and Run/Replay in the bottom toolbar. It has three little experiments:
+The playground has three little experiments:
 
 - **Inbox.** Urgent, unimportant, or sufficiently vague to warrant a conversation.
 - **Rewrite.** Turn a sentence from the strategy deck into plain language.
 - **Chaos.** Give the minority probability a chance. Replay the consequences.
 
-Edit the code and input. Watch the decisions. Stop a run. Replay it. Share the JSON.
-Demo mode identifies simulated scores; select **Model** to connect directly to JEV with your own key. [Walkthrough and simulator instructions →](docs/demo.md)
+Edit the code and input. Watch the decisions. Stop a run. Replay it. Share the JSON. Demo mode identifies simulated scores; select **Model** to connect directly to JEV with your own key. [Walkthrough and simulator instructions →](docs/demo.md)
 
 [![A real JEV decision and offline replay in Maybe](docs/assets/maybe-jev.gif)](docs/assets/maybe-jev-walkthrough.mp4)
 
-*Real JEV call with synthetic input, followed by offline replay. Idle time is cut and
-an actual screenshot of the probabilities is held for readability. This is an edited
-walkthrough, not a latency benchmark.*
+*Real JEV call with synthetic input, followed by offline replay. Idle time is cut and an actual screenshot of the probabilities is held for readability. This is an edited walkthrough, not a latency benchmark.*
 
 [Offline Demo walkthrough](docs/assets/maybe-walkthrough.mp4) · [Light](docs/assets/maybe-light.png) · [Dark](docs/assets/maybe-dark.png) · [Source editor](docs/assets/maybe-editor.png) · [JEV setup](docs/assets/maybe-jev-settings.png)
 
 ## About twelve lines of Swift
 
-Add this folder as a local Swift package in Xcode, and link the **Maybe** library
-product. Or use a local dependency in another package:
+Add this folder as a local Swift package in Xcode, and link the **Maybe** library product. Or use a local dependency in another package:
 
 ```swift
 // Package.swift
@@ -129,8 +107,7 @@ let json = try recording.json()
 let sameDecisions = try await engine.replay(Recording.decode(json))
 ```
 
-Your app remains Swift. The small string is the workflow. There is no JavaScript
-runtime, compiler service, or remote code execution hiding underneath it.
+Your app is Swift. A short string is the workflow. There's no JavaScript runtime, compiler service, or remote code execution hiding underneath it.
 
 ## What the language can do
 
@@ -147,12 +124,9 @@ runtime, compiler service, or remote code execution hiding underneath it.
 | `chaos { ... }` | Sample judgments from their probabilities. |
 | `print(draft)` | Show a value. No model involved. |
 
-An 80% threshold is symmetric: 90% yes takes the first branch, 90% no takes `else`,
-and 60/40 takes `otherwise maybe`. If you omit the maybe branch, uncertainty runs
-neither branch. That detail is small until it is your workflow.
+An 80% threshold is symmetric: 90% yes takes the first branch, 90% no takes `else`, and 60/40 takes `otherwise maybe`. If you omit the maybe branch, uncertainty runs neither branch.
 
-There are strings, numbers, and booleans. There are no arrays, arithmetic, functions,
-imports, or tool calls. This is a small language with a small job.
+There are strings, numbers, and booleans. There are no arrays, arithmetic, functions, imports, or tool calls. This is a small language with a small job.
 [The complete language guide →](docs/language.md)
 
 ## Bring your own judgment
@@ -181,32 +155,23 @@ Connect from Swift with one credential:
 let engine = Maybe(provider: try JevProvider(apiKey: userSuppliedAPIKey))
 ```
 
-For a live CLI run, set `JEV_API_KEY` (or `TYPESAFE_API_KEY`) in your environment,
-then explicitly opt in:
+For a live CLI run, set `JEV_API_KEY` (or `TYPESAFE_API_KEY`) in your environment, then explicitly opt in:
 
 ```sh
 swift run maybe run Examples/Programs/inbox.prob \
   --input "The checkout is down. Please investigate immediately." --live --trace
 ```
 
-In the iPhone playground, tap **Model** to enter your own key. It stays in memory
-for the session; **Use Demo and Forget Key** removes it. Live calls can incur charges.
+In the iPhone playground, tap **Model** to enter your own key. It stays in memory for the session; **Use Demo and Forget Key** removes it. Live calls can incur charges.
 
-JEV makes decisions, not text. Inbox and Chaos work directly; `llm` expressions
-need an optional Swift `write:` function connected to your chosen text generator.
-No local AI model is bundled. Tests use fixtures and need no credentials.
-For apps using a shared developer key, keep that key on your backend and use `ProxyProvider`.
+JEV makes decisions, not text. Inbox and Chaos work directly; `llm` expressions need an optional Swift `write:` function connected to your chosen text generator. No local AI model is bundled. Tests use fixtures and need no credentials. For apps using a shared developer key, keep that key on your backend and use `ProxyProvider`.
 [Provider setup, exact HTTP contracts, and mock behavior →](docs/providers.md)
 
-## The control flow is the reliable part
+## The control flow is what you trust
 
-A model supplies text or probabilities. The interpreter owns variables, branches,
-loops, budgets, and replay. It validates distributions, rejects malformed tapes,
-and refuses to keep looping forever because the model has “one more thought.”
+A model supplies text or probabilities. The interpreter owns variables, branches, loops, budgets, and replay. It validates distributions, rejects malformed tapes, and refuses to keep looping forever because the model has “one more thought.”
 
-A run has limits: **12 model calls, 200 statements, 90 seconds**, 12 nested blocks,
-and five iterations per semantic loop. Source and input are bounded, too.
-Cancellation follows Swift tasks. Custom providers must cooperate with it.
+A run has limits: **12 model calls, 200 statements, 90 seconds**, 12 nested blocks, and five iterations per semantic loop. Source and input are bounded, too. Cancellation follows Swift tasks. Custom providers must cooperate with it.
 
 Events let your UI show the work as it happens:
 
@@ -217,24 +182,18 @@ let recording = try await engine.run(source, input: message) { event in
 }
 ```
 
-Earlier events remain available if a later step fails. Recordings include the input
-and generated text, so the share button is also a data-sharing decision.
+Earlier events remain available if a later step fails. Recordings include the input and generated text, so the share button is also a data-sharing decision.
 [Architecture, limits, and compatibility details →](docs/architecture.md)
 
 ## Why this exists
 
-The interesting part of a language model application often fits between the model
-calls: when to trust the answer, when to try again, when to ask a person, and how to
-explain what just happened.
+The interesting part of a language model app often fits between the model calls: when to trust the answer, when to try again, when to ask a person, and how to explain what just happened.
 
-Those decisions deserve to be visible in the code.
+Those decisions should be visible in the code.
 
-Maybe is an experiment in making them short enough to read, small enough to embed,
-and interesting enough that somebody sends you a screenshot with “wait, you can do that?”
+Maybe is an experiment in making them short enough to read, small enough to embed, and interesting enough that somebody tweets your work.
 
-It is **not** an on-device implementation of Jev, a calibrated confidence system, or
-a production agent platform. The included HTTP adapters have contract tests. A direct JEV Inbox call and offline
-replay were verified on 2026-09-18; that smoke test is not a model-quality evaluation.
+It is **not** an on-device implementation of Jev, a calibrated confidence system, or a production agent platform. The included HTTP adapters have contract tests. A direct JEV Inbox call and offline replay were verified on 2026-09-18; that smoke test is not a model-quality evaluation.
 
 ## Take it apart
 
@@ -245,29 +204,18 @@ swift build -c release
   --input "Let's leverage synergies and circle back." --trace
 ```
 
-The test suite covers the language, state, bounds, cancellation, HTTP contracts,
-and replay. An additional compatibility corpus contains **17 original synthetic
-recordings and 13 rejected programs**, checked against the original TypeScript
-interpreter. No model bill is involved. The fixtures include full decision traces,
-not just the final line of output.
+The test suite covers the language, state, bounds, cancellation, HTTP contracts, and replay. An additional compatibility corpus contains **17 original synthetic recordings and 13 rejected programs**, checked against the original TypeScript
+interpreter. The fixtures include full decision traces, not just the final line of output.
 
-Start in [`Sources/Maybe/Maybe.swift`](Sources/Maybe/Maybe.swift) for execution,
-[`Parser.swift`](Sources/Maybe/Parser.swift) for grammar, or
-[`Providers.swift`](Sources/Maybe/Providers.swift) for model integration.
-[Contributing →](CONTRIBUTING.md)
+Start in [`Sources/Maybe/Maybe.swift`](Sources/Maybe/Maybe.swift) for execution, [`Parser.swift`](Sources/Maybe/Parser.swift) for grammar, or [`Providers.swift`](Sources/Maybe/Providers.swift) for model integration. [Contributing →](CONTRIBUTING.md)
 
 ## Credit where it is due
 
-[Probably](https://probably-lang.southpolesteve.workers.dev/) supplied the language
-and the excellent premise. Maybe reimplements its documented 0.1 behavior in
-native Swift, with attribution rather than bundled upstream implementation code.
+[Probably](https://probably-lang.southpolesteve.workers.dev/) supplied the language and the excellent premise. Maybe reimagines its documented 0.1 behavior in native Swift, with attribution rather than bundled upstream implementation code.
 
-[Monogram](https://github.com/johnsoncodehk/monogram) informed the testing approach:
-check what a parser accepts **and** what it rejects against a reference. It is not
-a runtime dependency or a Swift generator used by this project.
+[Monogram](https://github.com/johnsoncodehk/monogram) informed the testing approach: check what a parser accepts **and** what it rejects against a reference. It is not a runtime dependency or a Swift generator used by this project.
 
-Maybe's implementation is [Apache 2.0 licensed](LICENSE). Upstream projects retain their
-own terms. [Provenance and compatibility notes →](NOTICE.md)
+Maybe's implementation is [Apache 2.0 licensed](LICENSE). Upstream projects retain their own terms. [Provenance and compatibility notes →](NOTICE.md)
 
 ---
 

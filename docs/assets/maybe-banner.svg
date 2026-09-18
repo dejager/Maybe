@@ -1,7 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
-<title id="title">Maybe.</title><desc id="desc">Your code can finally say: I'm not sure. Native Swift. A little language for judgment calls.</desc>
-<rect width="1200" height="500" fill="#f5f1e8"/>
-<path d="M58 58H1142M58 438H1142" stroke="#262720" stroke-width="1"/>
-<g fill="#262720" font-family="Georgia,serif"><text x="56" y="270" font-size="180" letter-spacing="-10">Maybe<tspan fill="#db5029">.</tspan></text><text x="62" y="335" font-size="36">Your code can finally say: “I'm not sure.”</text></g>
-<g font-family="ui-monospace,Menlo,monospace" font-size="16" fill="#55564e"><text x="62" y="96">NATIVE SWIFT / OPEN TO DOUBT</text><text x="62" y="470">A LITTLE LANGUAGE FOR JUDGMENT CALLS.</text><text x="1020" y="470">v0.1.0</text></g>
-<g transform="translate(865 140)"><circle cx="105" cy="105" r="95" fill="none" stroke="#ded9ce" stroke-width="20"/><circle cx="105" cy="105" r="95" fill="none" stroke="#db5029" stroke-width="20" stroke-dasharray="310 597" transform="rotate(-90 105 105)"/><text x="105" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="48" fill="#262720">52%</text><text x="105" y="149" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#55564e">ASK AGAIN.</text></g></svg>
+  <title id="title">Maybe</title>
+  <desc id="desc">A native Swift framework for judgment calls. Your code can finally say: I'm not sure. An illustrative probability card reads 52%, Not sure yet.</desc>
+
+  <!-- Match the playground's system surfaces, typography, and blue tint. -->
+  <rect width="1200" height="500" rx="32" fill="#f5f5f7"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+    <rect x="64" y="56" width="40" height="40" rx="11" fill="#007aff"/>
+    <text x="84" y="84" text-anchor="middle" font-size="27" font-weight="600" fill="#fff">M</text>
+    <text x="120" y="82" font-size="17" font-weight="500" fill="#6e6e73">Native Swift. Open to doubt.</text>
+
+    <text x="56" y="250" font-size="150" font-weight="700" letter-spacing="-7" fill="#1d1d1f">Maybe<tspan fill="#007aff">.</tspan></text>
+    <text x="64" y="311" font-size="31" font-weight="400" letter-spacing="-.5" fill="#6e6e73">Your code can finally say:</text>
+    <text x="64" y="357" font-size="38" font-weight="600" letter-spacing="-1" fill="#1d1d1f">“I'm not sure.”</text>
+
+    <!-- A static example, not a live result or a claim of calibrated confidence. -->
+    <rect x="840" y="104" width="296" height="280" rx="28" fill="#fff" stroke="#e5e5ea"/>
+    <text x="868" y="147" font-size="17" font-weight="500" fill="#6e6e73">Judgment</text>
+    <text x="866" y="247" font-size="88" font-weight="600" letter-spacing="-4" fill="#1d1d1f">52<tspan font-size="48" letter-spacing="-2">%</tspan></text>
+    <text x="868" y="283" font-size="22" font-weight="500" fill="#007aff">Not sure yet</text>
+    <rect x="868" y="308" width="240" height="8" rx="4" fill="#e9e9ed"/>
+    <rect x="868" y="308" width="125" height="8" rx="4" fill="#007aff"/>
+    <text x="868" y="350" font-size="14" fill="#6e6e73">Illustrative probability</text>
+
+    <path d="M64 426H1136" stroke="#dedee3"/>
+    <text x="64" y="461" font-size="16" fill="#6e6e73">A little language for judgment calls.</text>
+    <text x="1136" y="461" text-anchor="end" font-size="14" fill="#6e6e73">v0.1.0</text>
+  </g>
+</svg>

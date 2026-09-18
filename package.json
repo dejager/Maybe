@@ -1,0 +1,10 @@
+{
+  "name": "maybe-development-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "swift test",
+    "check": "swift build -c release",
+    "test:jev-cli": "python3 scripts/test-jev-cli.py"
+  }
+}

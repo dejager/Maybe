@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049338230BAB6A0EC50B55A9 /* PlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44AFC7BF5AAB3A1277D9E1 /* PlaygroundUITests.swift */; };
+		18C95C3CED4A2DEEBC6428BA /* Maybe in Frameworks */ = {isa = PBXBuildFile; productRef = FD6BAF718C7BE7CD54687D58 /* Maybe */; };
+		220A489AB5DF93D7C9D262A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52320FCE9B90E6949CEB9C75 /* Assets.xcassets */; };
+		6470493486943450685CAD67 /* PlaygroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87DBC640A60172AF357B8B /* PlaygroundModel.swift */; };
+		8AD78C6219056B8252B9BDC2 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD840CA8E17B02E41F07D2B /* PlaygroundView.swift */; };
+		91B7912F32473A1B625EC15A /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058FEC2F75CDEC0207E5C51B /* Examples.swift */; };
+		A43E3B920E47633A59791719 /* MaybePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD0B430BCB5F1C704CD7B4 /* MaybePlaygroundApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04557C87C4E6B5D98305B844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF249D7DA5084CFF2AADFAB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74797127A576D51F214C3D6A;
+			remoteInfo = MaybePlayground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058FEC2F75CDEC0207E5C51B /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		1B74F467651D86D5BFDEEF41 /* MaybePlayground.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MaybePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD840CA8E17B02E41F07D2B /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
+		52320FCE9B90E6949CEB9C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		727EDD22F783AF54835B797F /* MaybePlaygroundUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MaybePlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E22182A91E8A35B94A6083C /* Probably */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Probably; path = ../..; sourceTree = SOURCE_ROOT; };
+		CDBD0B430BCB5F1C704CD7B4 /* MaybePlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaybePlaygroundApp.swift; sourceTree = "<group>"; };
+		FC44AFC7BF5AAB3A1277D9E1 /* PlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUITests.swift; sourceTree = "<group>"; };
+		FC87DBC640A60172AF357B8B /* PlaygroundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0282AAD1B76774D5734DCB04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C95C3CED4A2DEEBC6428BA /* Maybe in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C6D7623D6238FA7473CBDBC = {
+			isa = PBXGroup;
+			children = (
+				B5A924C0C5C0CA1D758AFF5D /* App */,
+				B2EBD4D2180BDF63E48C6E24 /* Packages */,
+				F37CEB1CE8828A7D2310090C /* UITests */,
+				4B1EBA2F5BF66FC77F5937F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B1EBA2F5BF66FC77F5937F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B74F467651D86D5BFDEEF41 /* MaybePlayground.app */,
+				727EDD22F783AF54835B797F /* MaybePlaygroundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2EBD4D2180BDF63E48C6E24 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				9E22182A91E8A35B94A6083C /* Probably */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B5A924C0C5C0CA1D758AFF5D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52320FCE9B90E6949CEB9C75 /* Assets.xcassets */,
+				058FEC2F75CDEC0207E5C51B /* Examples.swift */,
+				CDBD0B430BCB5F1C704CD7B4 /* MaybePlaygroundApp.swift */,
+				FC87DBC640A60172AF357B8B /* PlaygroundModel.swift */,
+				3BD840CA8E17B02E41F07D2B /* PlaygroundView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F37CEB1CE8828A7D2310090C /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC44AFC7BF5AAB3A1277D9E1 /* PlaygroundUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74797127A576D51F214C3D6A /* MaybePlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B89925F9BC8F4BCD8AA03B /* Build configuration list for PBXNativeTarget "MaybePlayground" */;
+			buildPhases = (
+				D67ED24390F4651CED286E6B /* Sources */,
+				424D36DEF1341128C9AEBEBF /* Resources */,
+				0282AAD1B76774D5734DCB04 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaybePlayground;
+			packageProductDependencies = (
+				FD6BAF718C7BE7CD54687D58 /* Maybe */,
+			);
+			productName = MaybePlayground;
+			productReference = 1B74F467651D86D5BFDEEF41 /* MaybePlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD4E8BDFEBFD81D6961E7518 /* MaybePlaygroundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 079523F93F627FB5B066FA24 /* Build configuration list for PBXNativeTarget "MaybePlaygroundUITests" */;
+			buildPhases = (
+				C7808CBA808B57E421AB6551 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCCDC3E04E68B8607FC6A19 /* PBXTargetDependency */,
+			);
+			name = MaybePlaygroundUITests;
+			packageProductDependencies = (
+			);
+			productName = MaybePlaygroundUITests;
+			productReference = 727EDD22F783AF54835B797F /* MaybePlaygroundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF249D7DA5084CFF2AADFAB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AD4E8BDFEBFD81D6961E7518 = {
+						TestTargetID = 74797127A576D51F214C3D6A;
+					};
+				};
+			};
+			buildConfigurationList = 3C1906FA185E12B39071CB68 /* Build configuration list for PBXProject "MaybePlayground" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0C6D7623D6238FA7473CBDBC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				62FB4BD66CCA456D151DA13E /* XCLocalSwiftPackageReference "../.." */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74797127A576D51F214C3D6A /* MaybePlayground */,
+				AD4E8BDFEBFD81D6961E7518 /* MaybePlaygroundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		424D36DEF1341128C9AEBEBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220A489AB5DF93D7C9D262A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7808CBA808B57E421AB6551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049338230BAB6A0EC50B55A9 /* PlaygroundUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67ED24390F4651CED286E6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91B7912F32473A1B625EC15A /* Examples.swift in Sources */,
+				A43E3B920E47633A59791719 /* MaybePlaygroundApp.swift in Sources */,
+				6470493486943450685CAD67 /* PlaygroundModel.swift in Sources */,
+				8AD78C6219056B8252B9BDC2 /* PlaygroundView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDCCDC3E04E68B8607FC6A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74797127A576D51F214C3D6A /* MaybePlayground */;
+			targetProxy = 04557C87C4E6B5D98305B844 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02A30D78D0EA48F4E526FE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Maybe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maybe.playground;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22F4075E8D346FDC1B10696D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		4BE486BED9CFBBC69164D297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Maybe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maybe.playground;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73C64F691706041EF408619D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maybe.playground.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MaybePlayground;
+			};
+			name = Debug;
+		};
+		B350E34FDFB02D14D02B80A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		B69CE92C9AF8E63B93498E58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.maybe.playground.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MaybePlayground;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		079523F93F627FB5B066FA24 /* Build configuration list for PBXNativeTarget "MaybePlaygroundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73C64F691706041EF408619D /* Debug */,
+				B69CE92C9AF8E63B93498E58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3C1906FA185E12B39071CB68 /* Build configuration list for PBXProject "MaybePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B350E34FDFB02D14D02B80A4 /* Debug */,
+				22F4075E8D346FDC1B10696D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D1B89925F9BC8F4BCD8AA03B /* Build configuration list for PBXNativeTarget "MaybePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02A30D78D0EA48F4E526FE2D /* Debug */,
+				4BE486BED9CFBBC69164D297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		62FB4BD66CCA456D151DA13E /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD6BAF718C7BE7CD54687D58 /* Maybe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Maybe;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CF249D7DA5084CFF2AADFAB1 /* Project object */;
+}

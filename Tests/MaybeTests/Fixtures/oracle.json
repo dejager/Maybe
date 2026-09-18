@@ -1,0 +1,792 @@
+{
+  "provenance": "Original synthetic fixtures executed with Probably 0.1; no live model calls.",
+  "success": [
+    {
+      "version": 1,
+      "source": "print(\"Hello, doubt.\") print(4.5) print(false)",
+      "input": "",
+      "tape": [],
+      "output": [
+        "Hello, doubt.",
+        "4.5",
+        "false"
+      ],
+      "trace": [
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "Hello, doubt."
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "4.5"
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "false"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let value=input() print(value)",
+      "input": "🦆 exact input",
+      "tape": [],
+      "output": [
+        "🦆 exact input"
+      ],
+      "trace": [
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "value",
+          "detail": {
+            "value": "🦆 exact input"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "🦆 exact input"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "if input() feels \"ready\" with confidence 80% { print(\"go\") } otherwise maybe { print(\"ask\") } else { print(\"wait\") }",
+      "input": "yes",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "yes",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.9,
+            "NOT: ready": 0.09999999999999998
+          }
+        }
+      ],
+      "output": [
+        "go"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "ready → 90% · highest probability",
+          "detail": {
+            "value": "yes",
+            "probabilities": {
+              "ready": 0.9,
+              "NOT: ready": 0.09999999999999998
+            },
+            "chosen": "ready",
+            "threshold": 0.8
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "go"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "if input() feels \"ready\" with confidence 80% { print(\"go\") } otherwise maybe { print(\"ask\") } else { print(\"wait\") }",
+      "input": "no",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "no",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.1,
+            "NOT: ready": 0.9
+          }
+        }
+      ],
+      "output": [
+        "wait"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "NOT: ready → 90% · highest probability",
+          "detail": {
+            "value": "no",
+            "probabilities": {
+              "ready": 0.1,
+              "NOT: ready": 0.9
+            },
+            "chosen": "NOT: ready",
+            "threshold": 0.8
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "wait"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "if input() feels \"ready\" with confidence 80% { print(\"go\") } otherwise maybe { print(\"ask\") } else { print(\"wait\") }",
+      "input": "ambiguous",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "ambiguous",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.6,
+            "NOT: ready": 0.4
+          }
+        }
+      ],
+      "output": [
+        "ask"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "Uncertain → otherwise maybe",
+          "detail": {
+            "value": "ambiguous",
+            "probabilities": {
+              "ready": 0.6,
+              "NOT: ready": 0.4
+            },
+            "chosen": null,
+            "threshold": 0.8
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "ask"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "chaos { if input() feels \"ready\" with confidence 80% { print(\"go\") } otherwise maybe { print(\"ask\") } else { print(\"wait\") } }",
+      "input": "yes",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "yes",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.9,
+            "NOT: ready": 0.09999999999999998
+          },
+          "draw": 0.95
+        }
+      ],
+      "output": [
+        "wait"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "NOT: ready → 10% · sampled",
+          "detail": {
+            "value": "yes",
+            "probabilities": {
+              "ready": 0.9,
+              "NOT: ready": 0.09999999999999998
+            },
+            "chosen": "NOT: ready",
+            "threshold": 0.8,
+            "draw": 0.95
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "wait"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "chaos { if input() feels \"ready\" with confidence 80% { print(\"go\") } otherwise maybe { print(\"ask\") } else { print(\"wait\") } }",
+      "input": "ambiguous",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "ambiguous",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.6,
+            "NOT: ready": 0.4
+          },
+          "draw": 0.95
+        }
+      ],
+      "output": [
+        "ask"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "Uncertain → otherwise maybe",
+          "detail": {
+            "value": "ambiguous",
+            "probabilities": {
+              "ready": 0.6,
+              "NOT: ready": 0.4
+            },
+            "chosen": null,
+            "threshold": 0.8,
+            "draw": 0.95
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "ask"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let draft=llm \"simplify\" using input() print(draft)",
+      "input": "verbose",
+      "tape": [
+        {
+          "kind": "write",
+          "args": {
+            "prompt": "simplify",
+            "value": "verbose"
+          },
+          "result": "Edited: verbose"
+        }
+      ],
+      "output": [
+        "Edited: verbose"
+      ],
+      "trace": [
+        {
+          "kind": "write",
+          "line": 1,
+          "text": "Edited: verbose",
+          "detail": {
+            "prompt": "simplify",
+            "value": "verbose"
+          }
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "draft",
+          "detail": {
+            "value": "Edited: verbose"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "Edited: verbose"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let draft=write \"simplify\" print(draft)",
+      "input": "",
+      "tape": [
+        {
+          "kind": "write",
+          "args": {
+            "prompt": "simplify"
+          },
+          "result": "Edited: simplify"
+        }
+      ],
+      "output": [
+        "Edited: simplify"
+      ],
+      "trace": [
+        {
+          "kind": "write",
+          "line": 1,
+          "text": "Edited: simplify",
+          "detail": {
+            "prompt": "simplify"
+          }
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "draft",
+          "detail": {
+            "value": "Edited: simplify"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "Edited: simplify"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let draft=input() while draft feels \"verbose\" { draft=llm \"simplify\" using draft } print(draft)",
+      "input": "verbose",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "verbose",
+            "labels": [
+              "verbose",
+              "NOT: verbose"
+            ]
+          },
+          "result": {
+            "verbose": 0.9,
+            "NOT: verbose": 0.09999999999999998
+          }
+        },
+        {
+          "kind": "write",
+          "args": {
+            "prompt": "simplify",
+            "value": "verbose"
+          },
+          "result": "Edited: verbose"
+        },
+        {
+          "kind": "judge",
+          "args": {
+            "value": "Edited: verbose",
+            "labels": [
+              "verbose",
+              "NOT: verbose"
+            ]
+          },
+          "result": {
+            "verbose": 0.1,
+            "NOT: verbose": 0.9
+          }
+        }
+      ],
+      "output": [
+        "Edited: verbose"
+      ],
+      "trace": [
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "draft",
+          "detail": {
+            "value": "verbose"
+          }
+        },
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "verbose → 90% · highest probability",
+          "detail": {
+            "value": "verbose",
+            "probabilities": {
+              "verbose": 0.9,
+              "NOT: verbose": 0.09999999999999998
+            },
+            "chosen": "verbose",
+            "threshold": 0.5
+          }
+        },
+        {
+          "kind": "repeat",
+          "line": 1,
+          "text": "Iteration 1 of at most 5"
+        },
+        {
+          "kind": "write",
+          "line": 1,
+          "text": "Edited: verbose",
+          "detail": {
+            "prompt": "simplify",
+            "value": "verbose"
+          }
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "draft",
+          "detail": {
+            "value": "Edited: verbose"
+          }
+        },
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "NOT: verbose → 90% · highest probability",
+          "detail": {
+            "value": "Edited: verbose",
+            "probabilities": {
+              "verbose": 0.1,
+              "NOT: verbose": 0.9
+            },
+            "chosen": "NOT: verbose",
+            "threshold": 0.5
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "Edited: verbose"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "match input() { \"first\" => { print(\"1\") } \"second\" => { print(\"2\") } \"third\" => { print(\"3\") } }",
+      "input": "no",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "no",
+            "labels": [
+              "first",
+              "second",
+              "third"
+            ]
+          },
+          "result": {
+            "first": 0.1,
+            "second": 0.45,
+            "third": 0.45
+          }
+        }
+      ],
+      "output": [
+        "2"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "second → 45% · highest probability",
+          "detail": {
+            "value": "no",
+            "probabilities": {
+              "first": 0.1,
+              "second": 0.45,
+              "third": 0.45
+            },
+            "chosen": "second",
+            "threshold": 0
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "2"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let x=\"outer\" repeat 2 { let local=\"new\" x=local } print(x)",
+      "input": "",
+      "tape": [],
+      "output": [
+        "new"
+      ],
+      "trace": [
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "x",
+          "detail": {
+            "value": "outer"
+          }
+        },
+        {
+          "kind": "repeat",
+          "line": 1,
+          "text": "Iteration 1 of 2"
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "local",
+          "detail": {
+            "value": "new"
+          }
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "x",
+          "detail": {
+            "value": "new"
+          }
+        },
+        {
+          "kind": "repeat",
+          "line": 1,
+          "text": "Iteration 2 of 2"
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "local",
+          "detail": {
+            "value": "new"
+          }
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "x",
+          "detail": {
+            "value": "new"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "new"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "let x=\"outer\" repeat 1 { let x=\"inner\" print(x) } print(x)",
+      "input": "",
+      "tape": [],
+      "output": [
+        "inner",
+        "outer"
+      ],
+      "trace": [
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "x",
+          "detail": {
+            "value": "outer"
+          }
+        },
+        {
+          "kind": "repeat",
+          "line": 1,
+          "text": "Iteration 1 of 1"
+        },
+        {
+          "kind": "assign",
+          "line": 1,
+          "text": "x",
+          "detail": {
+            "value": "inner"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "inner"
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "outer"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "// comments and source lines\nlet message=\"one\\ntwo\";\nprint(message);",
+      "input": "",
+      "tape": [],
+      "output": [
+        "one\ntwo"
+      ],
+      "trace": [
+        {
+          "kind": "assign",
+          "line": 2,
+          "text": "message",
+          "detail": {
+            "value": "one\ntwo"
+          }
+        },
+        {
+          "kind": "print",
+          "line": 3,
+          "text": "one\ntwo"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "if input() feels \"ready\" with confidence 80% { print(\"yes\") } else { print(\"no\") }",
+      "input": "ambiguous",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "ambiguous",
+            "labels": [
+              "ready",
+              "NOT: ready"
+            ]
+          },
+          "result": {
+            "ready": 0.6,
+            "NOT: ready": 0.4
+          }
+        }
+      ],
+      "output": [],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": "Uncertain → otherwise maybe",
+          "detail": {
+            "value": "ambiguous",
+            "probabilities": {
+              "ready": 0.6,
+              "NOT: ready": 0.4
+            },
+            "chosen": null,
+            "threshold": 0.8
+          }
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "print(0.000001) print(0.0000001) print(100000000000000000000) print(1000000000000000000000)",
+      "input": "",
+      "tape": [],
+      "output": [
+        "0.000001",
+        "1e-7",
+        "100000000000000000000",
+        "1e+21"
+      ],
+      "trace": [
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "0.000001"
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "1e-7"
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "100000000000000000000"
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "1e+21"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "source": "match input() { \"\" => {print(\"empty\")} \"other\" => {print(\"other\")} }",
+      "input": "yes",
+      "tape": [
+        {
+          "kind": "judge",
+          "args": {
+            "value": "yes",
+            "labels": [
+              "",
+              "other"
+            ]
+          },
+          "result": {
+            "": 0.9,
+            "other": 0.09999999999999998
+          }
+        }
+      ],
+      "output": [
+        "empty"
+      ],
+      "trace": [
+        {
+          "kind": "judge",
+          "line": 1,
+          "text": " → 90% · highest probability",
+          "detail": {
+            "value": "yes",
+            "probabilities": {
+              "": 0.9,
+              "other": 0.09999999999999998
+            },
+            "chosen": "",
+            "threshold": 0
+          }
+        },
+        {
+          "kind": "print",
+          "line": 1,
+          "text": "empty"
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    "print(process.env)",
+    "let x = fetch(\"url\")",
+    "let if = \"x\"",
+    "repeat 0 {}",
+    "repeat 6 {}",
+    "match \"x\" {\"one\" => {}}",
+    "if input() feels \"ready\" with confidence 49% {}",
+    "print(\"unterminated)",
+    "let x=llm \"a\" using llm \"b\"",
+    "print(missing)",
+    "let x=1 let x=2",
+    "print(\"x\") }",
+    "repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {repeat 1 {}}}}}}}}}}}}}"
+  ]
+}

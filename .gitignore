@@ -60,3 +60,16 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Local development, credentials, and private verification output
+.DS_Store
+.swiftpm/
+work/
+DerivedData/
+*.xcresult/
+*.xcuserstate
+.env
+.env.*
+!.env.example
+artifacts/
+Examples/MaybePlayground/Evidence/

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Maybe.</title><desc id="desc">Your code can finally say: I'm not sure. Native Swift. A little language for judgment calls.</desc>
+<rect width="1200" height="500" fill="#f5f1e8"/>
+<path d="M58 58H1142M58 438H1142" stroke="#262720" stroke-width="1"/>
+<g fill="#262720" font-family="Georgia,serif"><text x="56" y="270" font-size="180" letter-spacing="-10">Maybe<tspan fill="#db5029">.</tspan></text><text x="62" y="335" font-size="36">Your code can finally say: “I'm not sure.”</text></g>
+<g font-family="ui-monospace,Menlo,monospace" font-size="16" fill="#55564e"><text x="62" y="96">NATIVE SWIFT / OPEN TO DOUBT</text><text x="62" y="470">A LITTLE LANGUAGE FOR JUDGMENT CALLS.</text><text x="1020" y="470">v0.1.0</text></g>
+<g transform="translate(865 140)"><circle cx="105" cy="105" r="95" fill="none" stroke="#ded9ce" stroke-width="20"/><circle cx="105" cy="105" r="95" fill="none" stroke="#db5029" stroke-width="20" stroke-dasharray="310 597" transform="rotate(-90 105 105)"/><text x="105" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="48" fill="#262720">52%</text><text x="105" y="149" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#55564e">ASK AGAIN.</text></g></svg>

@@ -1,0 +1,8 @@
+// A minority opinion gets a vote, too.
+chaos {
+  if input() feels "urgent" {
+    print("Cancel the meeting. We have a situation.")
+  } else {
+    print("Cancel the meeting anyway. A small gift to humanity.")
+  }
+}

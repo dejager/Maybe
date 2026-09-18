@@ -1,0 +1,5 @@
+let greeting = "Hello, uncertainty."
+print(greeting)
+repeat 2 {
+  print("Still here. Probably.")
+}

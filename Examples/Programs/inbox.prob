@@ -1,0 +1,9 @@
+// Your inbox has opinions. You are allowed to disagree.
+let message = input()
+if message feels "urgent" with confidence 80% {
+  print("Put the coffee down. This one needs you.")
+} otherwise maybe {
+  print("The model is squinting. Ask one more question.")
+} else {
+  print("Keep the coffee. It can wait.")
+}

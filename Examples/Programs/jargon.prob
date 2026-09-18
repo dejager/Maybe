@@ -1,0 +1,6 @@
+// A compiler for the email you wish your boss had sent.
+let draft = input()
+while draft feels "full of corporate jargon" {
+  draft = llm "Rewrite this like a person with somewhere to be." using draft
+}
+print(draft)
